@@ -1,9 +1,10 @@
 <h1>Toys</h1>
 <% for toy in @toys %>
   <div class="toy" style="padding: 20px">
-    <div class="name"><strong>Name: </strong><%= toy.name %></div>
+    <div class="name"><strong>Name: </strong><%= link_to toy.name, toy_path(toy.name) %></div>
     <div class="description"><strong>Description: </strong><%= toy.description %></div>
     <div class="date"><strong>Date: </strong><%= toy.date %></div>
     <div class="user"><strong>User:</strong> <%= toy.user %></div>
+    <div class="delete"><%= link_to "Delete", delete_path(toy.name) %></div>
   </div>
 <% end %>
