@@ -10,6 +10,7 @@ class ToysController < ApplicationController
                       description: params[:description],
                       date: Date.today,
                       user: params[:user])
+    redirect_to show_toys_path
   end
 
   def update
@@ -23,7 +24,10 @@ class ToysController < ApplicationController
   end
 
   def delete
-    Toy.find_by_name(params[:toy]).destroy
+    Toy.find_by_id(params[:id]).destroy
     redirect_to show_toys_path
+  end
+
+  def new
   end
 end
