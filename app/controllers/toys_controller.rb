@@ -13,6 +13,10 @@ class ToysController < ApplicationController
     redirect_to show_toys_path
   end
 
+  def edit
+    @toy = Toy.find_by_id(params[:id])
+  end
+
   def update
     @toy = Toy.find_by_id(params[:id])
     @toy.description = params[:description]

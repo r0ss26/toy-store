@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 for i in 0..50
   toy = Toy.create(name: Faker::Game.title, 
                    description: Faker::Lorem.words(number: 30).join(" "), 

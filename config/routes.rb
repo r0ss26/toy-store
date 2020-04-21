@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   patch "/toys/:id", to: "toys#update"
 
   delete "/toys/:id", to: "toys#delete", as: "delete_toy"
+
+  get "/toys/:id/edit", to: "toys#edit", as: "edit_toy"
 end
