@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  # Toys
   get "/toys/new", to: "toys#new", as: "new_toy"
   post "/toys/new", to: "toys#create", as: "create_toy"
 
@@ -13,4 +15,16 @@ Rails.application.routes.draw do
   delete "/toys/:id", to: "toys#delete", as: "delete_toy"
 
   get "/toys/:id/edit", to: "toys#edit", as: "edit_toy"
+
+  # Manufacturers
+  get "/manufacturers", to: "manufacturers#index", as: "manufacturers"
+  get "/manufacturers/new", to: "manufacturer#new", as: "new_manufacturer"
+  post "/manufacturers", to: "manufacturers#create"
+  get "/manufacturers/:id", to: "manufacturers#show", as: "manufacturer"
+  delete "/manufacturers/:id", to: "manufacturers#destroy"
+  get "/manufacturers/:id/edit", to: "manufacturer#new", as: "new_manufacturer"
+  put "/manufacturers/:id", to: "manufacturer#update"
+  patch "/manufacturers/:id", to: "manufacturer#update"
+  
+
 end
