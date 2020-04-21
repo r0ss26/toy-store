@@ -1,0 +1,9 @@
+<h1>Manufacturers</h1>
+<div class="new"><%= link_to "New Manufacturer", new_manufacturer_path %></div>
+<% for manufacturer in @manufacturers %>
+  <div class="manufacturer" style="padding: 20px">
+    <div class="name"><strong>Name: </strong><%= link_to manufacturer.name, show_manufacturer_path(manufacturer.id) %></div>
+    <div class="location"><strong>Location:</strong> <%= manufacturer.location %></div>
+    <div class="delete"><%= link_to "Delete", delete_manufacturer_path(manufacturer.id), :method => :delete %></div>
+  </div>
+<% end %>
