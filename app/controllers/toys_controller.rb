@@ -9,7 +9,8 @@ class ToysController < ApplicationController
     @toy = Toy.create(name: params[:name],
                       description: params[:description],
                       date: Date.today,
-                      user: params[:user])
+                      user_id: params[:user_id],
+                      manufacturer_id: params[:manufacturer_id])
     redirect_to show_toys_path
   end
 
@@ -19,7 +20,9 @@ class ToysController < ApplicationController
 
   def update
     @toy = Toy.find_by_id(params[:id])
+    @toy.name = params[:name]
     @toy.description = params[:description]
+    @toy.manufacturer_id = params[:manufacturer_id]
     @toy.save
   end
 

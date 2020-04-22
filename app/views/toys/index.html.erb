@@ -6,7 +6,8 @@
     <div class="description"><strong>ID: </strong><%= toy.id %></div>
     <div class="description"><strong>Description: </strong><%= toy.description %></div>
     <div class="date"><strong>Date: </strong><%= toy.date %></div>
-    <div class="user"><strong>User:</strong> <%= toy.user %></div>
+    <div class="user"><strong>User:</strong> <%= toy.user.email %></div>
+    <div class="manufacturer"><strong>Manufacturer:</strong> <%= toy.manufacturer.name %></div>
     <div class="delete"><%= link_to "Delete", delete_toy_path(toy.id), :method => :delete %></div>
   </div>
 <% end %>

@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   # Manufacturers
   get "/manufacturers", to: "manufacturers#index", as: "manufacturers"
-  get "/manufacturers/new", to: "manufacturer#new", as: "new_manufacturer"
+  get "/manufacturers/new", to: "manufacturers#new", as: "new_manufacturer"
   post "/manufacturers", to: "manufacturers#create"
   get "/manufacturers/:id", to: "manufacturers#show", as: "show_manufacturer"
   delete "/manufacturers/:id", to: "manufacturers#destroy", as: "delete_manufacturer"
